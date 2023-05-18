@@ -6,4 +6,5 @@ public enum PatchingStatus : byte
 	MissingNonSecurityPatches = 1,
 	Unknown = 2,
 	RequiresPatching = 3,
+	OutOfSupport = 4,
 }
