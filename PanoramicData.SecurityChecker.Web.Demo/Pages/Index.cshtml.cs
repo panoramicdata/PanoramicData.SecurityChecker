@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PanoramicData.SecurityChecker.Web.Demo.Pages;
 public class IndexModel : PageModel
@@ -13,6 +12,6 @@ public class IndexModel : PageModel
 
 	public void OnGet()
 	{
-
+		// No implementation required at this stage
 	}
 }
