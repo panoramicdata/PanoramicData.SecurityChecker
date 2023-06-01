@@ -40,19 +40,13 @@ internal class SecurityChecker : ISecurityChecker
 
 			return new SecurityStatus
 			{
-				RuntimeVersion = runtimeStatus.RuntimeVersion,
-				PatchingStatus = runtimeStatus.PatchingStatus,
-				UnpatchedCves = runtimeStatus.UnpatchedCves,
-				DaysToEndOfSupport = runtimeStatus.DaysToEndOfSupport,
+				Runtime = runtimeStatus,
 			};
 		}
 		catch (Exception ex)
 		{
 			_logger.LogError(ex, "Failed to gather security status! Message: {Message}", ex.Message);
-			return new SecurityStatus
-			{
-				PatchingStatus = PatchingStatus.Unknown,
-			};
+			return new SecurityStatus();
 		}
 	}
 }

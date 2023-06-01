@@ -27,10 +27,10 @@ public class RuntimeCheckerTests : TestBase
 		var checker = new RuntimeChecker(productCollectionLoader, productReleasesLoader, _logger);
 		var result = await checker.GetRuntimeStatusAsync(runtimeVersion, CancellationToken.None);
 
-		result.RuntimeVersion.Major.Should().Be(runtimeVersion.Major);
-		result.RuntimeVersion.Minor.Should().Be(runtimeVersion.Minor);
-		result.RuntimeVersion.Build.Should().Be(runtimeVersion.Build);
-		result.RuntimeVersion.Revision.Should().Be(runtimeVersion.Revision);
+		result.Version.Major.Should().Be(runtimeVersion.Major);
+		result.Version.Minor.Should().Be(runtimeVersion.Minor);
+		result.Version.Build.Should().Be(runtimeVersion.Build);
+		result.Version.Revision.Should().Be(runtimeVersion.Revision);
 	}
 
 	[Fact]

@@ -34,7 +34,7 @@ internal class RuntimeChecker : IRuntimeChecker
 
 			return new RuntimeStatus
 			{
-				RuntimeVersion = runtimeVersion.ToRuntimeVersion(),
+				Version = runtimeVersion.ToRuntimeVersion(),
 				PatchingStatus = patchingStatus,
 				UnpatchedCves = cves,
 				DaysToEndOfSupport = daysToEndOfSupport,

@@ -10,7 +10,12 @@ public class RuntimeStatus
 	/// <summary>
 	/// The version of the runtime on which the hosting application is running
 	/// </summary>
-	public RuntimeVersion RuntimeVersion { get; internal set; } = new();
+	public RuntimeVersion Version { get; internal set; } = new();
+
+	/// <summary>
+	/// The textual name of the runtime version
+	/// </summary>
+	public string VersionName => Version.ToString();
 
 	/// <summary>
 	/// The patching status of the runtime
@@ -18,7 +23,7 @@ public class RuntimeStatus
 	public PatchingStatus PatchingStatus { get; internal set; } = PatchingStatus.Unknown;
 
 	/// <summary>
-	/// Any CVEs that the host application is currently vulnerable to due to missing security patches
+	/// Any CVEs that the host application is currently vulnerable due to missing security patches
 	/// </summary>
 	public IEnumerable<Cve> UnpatchedCves { get; internal set; } = Enumerable.Empty<Cve>();
 
